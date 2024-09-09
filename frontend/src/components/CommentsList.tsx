@@ -205,7 +205,7 @@ const CommentsList: React.FC = () => {
                   Reply
                 </Typography>
 
-                {/* Reply section */}
+                {/* Reply Input Section */}
                 {commentsStore.activeReplyId === comment.id && (
                   <Box sx={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
                     <Avatar alt='User' sx={{ height: '35px', width: '35px' }}>
@@ -223,6 +223,8 @@ const CommentsList: React.FC = () => {
                     />
                   </Box>
                 )}
+
+                {/* Reply Submit and Cancel Buttons */}
                 {commentsStore.activeReplyId === comment.id && (
                   <Box sx={{ textAlign: 'right', marginTop: '0.5rem' }}>
                     <Button
@@ -247,6 +249,40 @@ const CommentsList: React.FC = () => {
                     </Button>
                   </Box>
                 )}
+
+                {/* Display Replies */}
+                {comment.replies.length > 0 && (
+                  <Box sx={{ marginTop: '1rem' }}>
+                    {comment.replies.map((reply) => (
+                      <Box
+                        key={reply.id}
+                        sx={{
+                          display: 'flex',
+                          gap: '1rem',
+                          marginTop: '1rem',
+                          marginLeft: '2rem',
+                          borderLeft: '2px solid #ddd',
+                          paddingLeft: '1rem',
+                        }}
+                      >
+                        <Avatar sx={{ height: '35px', width: '35px' }}>R</Avatar>
+                        <Box>
+                          <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <Typography variant='subtitle2'>
+                              @{reply.author}
+                            </Typography>
+                            <Typography variant='body2' sx={{ fontSize: '12px', color: 'grey' }}>
+                              {reply.timestamp}
+                            </Typography>
+                          </Box>
+                          <Typography variant='subtitle2' sx={{ color: '#000', fontWeight: 400, marginTop: '0.2rem' }}>
+                            {reply.content}
+                          </Typography>
+                        </Box>
+                      </Box>
+                    ))}
+                  </Box>
+                )}
               </Box>
             </Box>
             <MoreVertIcon sx={{ color: 'black', cursor: 'pointer' }} />
@@ -258,3 +294,4 @@ const CommentsList: React.FC = () => {
 };
 
 export default observer(CommentsList);
+
