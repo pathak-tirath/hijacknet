@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "authorImage":"../assets/images/user-avatar.svg",
+    "author": "clemdane",
+    "content": "Helen Joyce is such a hero.",
+    "timestamp": "13 hours ago",
+    "replies": 5
+  },
+  {
+    "id": "2",
+    "author": "wesleywarsmith1113",
+    "authorImage":"../assets/images/user-avatar.svg",
+    "content": "They live in a bubble inside a bubble.",
+    "timestamp": "13 hours ago",
+    "replies": 0
+  },
+  {
+    "id": "3",
+    "author": "hayleys-w5q",
+    "authorImage":"../assets/images/user-avatar.svg",
+    "content": "Those who can make you believe absurdities can make you commit atrocities.",
+    "timestamp": "10 hours ago",
+    "replies": 1
+  },
+  {
+    "id": "4",
+    "author": "SheridanM-dc1nk",
+    "authorImage":"../assets/images/user-avatar.svg",
+    "content": "I have been in this so called debate for 8 years. Never ONCE heard from the \"other side\", what a woman is. Not even once. They don't even get into specifics about how it's dresses and makeup, because they know how it sounds. The closest they get is something about how it's having a lady brain, but that's entirely untrue also.",
+    "timestamp": "13 hours ago",
+    "replies": 6
+  }
+]
